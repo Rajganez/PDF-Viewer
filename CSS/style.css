@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #eee;
+}
+
+button {
+  cursor: pointer;
+  padding: 2px 5px;
+  color: #ccc;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #808080;
+}
+
+main {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+main h3 {
+  text-align: center;
+  width: 100%;
+  word-spacing: 0.5rem;
+  font-size: 2rem;
+  color: #bbbbbb;
+}
+
+.pdf-viewer {
+  background-color: #fff;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  height: 10vh;
+  background-color: #000000;
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee;
+  font-size: 1.4rem;
+}
+
+.pagination span {
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+
+.pagination button {
+  font-size: 1.5rem;
+}
+
+button:active > * {
+  color: #8d8d8d;
+}
+
+footer ul {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+footer ul li:first-child {
+  margin-left: 20px;
+}
+
+footer ul li:last-child {
+  margin-right: 20px;
+}
+
+#zoomValue {
+  display: inline-block;
+  font-size: 0.9rem;
+  width: 60px;
+  vertical-align: center;
+}
+
+#openPDF {
+  font-size: 1.2rem;
+  padding: 2px 5px;
+  font-weight: 700;
+  color: #eee;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  main h3 {
+    font-size: 1.5rem;
+    word-spacing: 0.3rem;
+  }
+
+  .pagination {
+    font-size: 1rem;
+    top: auto;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pagination span {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+
+  .pagination button {
+    font-size: 1.2rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  #openPDF {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  main h3 {
+    font-size: 1.2rem;
+    word-spacing: 0.2rem;
+  }
+
+  .pdf-viewer {
+    background-color: #fff;
+    margin: auto;
+    width: 300px;
+  }
+
+  .pagination {
+    font-size: 0.9rem;
+  }
+
+  .pagination button {
+    font-size: 1rem;
+  }
+
+  footer ul {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  footer ul li {
+    margin: 0;
+  }
+  #zoomValue {
+    display: none;
+  }
+  #zoom {
+    display: none;
+  }
+  #openPDF {
+    font-size: 0.9rem;
+    padding: 2px 2px;
+  }
+}
